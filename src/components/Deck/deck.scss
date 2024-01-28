@@ -1,0 +1,25 @@
+.deck-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .deck {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        height: 100%;
+        width: 100%;
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 767px) {
+    .deck-wrapper {
+        .deck {
+            flex-direction: column;
+            gap: 20px;
+            padding: 0 20px;
+        }
+    }
+}

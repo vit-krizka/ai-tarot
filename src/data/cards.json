@@ -1,0 +1,254 @@
+[
+    {
+        "id": 0,
+        "name": "Blázen",
+        "type": "Velká Arkána",
+        "meaning": "Začátky, nevinnost, spontánnost, svobodný duch",
+        "image": "00-the-fool.png"
+    },
+    {
+        "id": 1,
+        "name": "Mág",
+        "type": "Velká Arkána",
+        "meaning": "Síla, dovednost, koncentrace, akce, vynalézavost",
+        "image": "01-the-magician.png"
+    },
+    {
+        "id": 2,
+        "name": "Velekněžka",
+        "type": "Velká Arkána",
+        "meaning": "Intuice, moudrost, podvědomí, ženskost, psychické schopnosti",
+        "image": "02-the-high-priestess.png"
+    },
+    {
+        "id": 3,
+        "name": "Císařovna",
+        "type": "Velká Arkána",
+        "meaning": "Plodnost, ženskost, krása, příroda, hojnost",
+        "image": "03-the-empress.png"
+    },
+    {
+        "id": 4,
+        "name": "Císař",
+        "type": "Velká Arkána",
+        "meaning": "Autorita, otec, mužnost, síla, vůle",
+        "image": "04-the-emperor.png"
+    },
+    {
+        "id": 5,
+        "name": "Velekněz",
+        "type": "Velká Arkána",
+        "meaning": "Vzdělání, tradice, víra, náboženství, morálka",
+        "image": "05-the-heirophant.png"
+    },
+    {
+        "id": 6,
+        "name": "Milenci",
+        "type": "Velká Arkána",
+        "meaning": "Láska, vášeň, přitažlivost, vztah, rozhodnutí",
+        "image": "06-the-lovers.png"
+    },
+    {
+        "id": 7,
+        "name": "Vůz",
+        "type": "Velká Arkána",
+        "meaning": "Pohyb, cesta, cíl, výlet, dobrodružství",
+        "image": "07-the-chariot.png"
+    },
+    {
+        "id": 8,
+        "name": "Síla",
+        "type": "Velká Arkána",
+        "meaning": "Síla, vůle, odvaha, sebeovládání, energie",
+        "image": "08-strength.png"
+    },
+    {
+        "id": 9,
+        "name": "Poustevník",
+        "type": "Velká Arkána",
+        "meaning": "Samota, introspekce, opatrnost, zkušenost, moudrost",
+        "image": "09-the-hermit.png"
+    },
+    {
+        "id": 10,
+        "name": "Kolo Štěstí",
+        "type": "Velká Arkána",
+        "meaning": "Štěstí, osud, změna, příležitost, cyklus",
+        "image": "10-wheel-of-fortune.png"
+    },
+    {
+        "id": 11,
+        "name": "Spravedlnost",
+        "type": "Velká Arkána",
+        "meaning": "Spravedlnost, rovnováha, rozhodnutí, zodpovědnost, zákon",
+        "image": "11-justice.png"
+    },
+    {
+        "id": 12,
+        "name": "Viselec",
+        "type": "Velká Arkána",
+        "meaning": "Oběť, ztráta, zastavení, nevědomost, uvěznění",
+        "image": "12-the-hanged-man.png"
+    },
+    {
+        "id": 13,
+        "name": "Smrt",
+        "type": "Velká Arkána",
+        "meaning": "Konec, změna, transformace, obnova, přeměna",
+        "image": "13-death.png"
+    },
+    {
+        "id": 14,
+        "name": "Mírnost",
+        "type": "Velká Arkána",
+        "meaning": "Naděje, trpělivost, vyčkávání, zrání, odpuštění",
+        "image": "14-temperance.png"
+    },
+    {
+        "id": 15,
+        "name": "Ďábel",
+        "type": "Velká Arkána",
+        "meaning": "Závislost, posedlost, vášeň, pokušení, strach",
+        "image": "15-the-devil.png"
+    },
+    {
+        "id": 16,
+        "name": "Věž",
+        "type": "Velká Arkána",
+        "meaning": "Změna, zničení, katastrofa, zmatek, chaos",
+        "image": "16-the-tower.png"
+    },
+    {
+        "id": 17,
+        "name": "Hvězda",
+        "type": "Velká Arkána",
+        "meaning": "Naděje, inspirace, spiritualita, optimismus, jasnozřivost",
+        "image": "17-the-star.png"
+    },
+    {
+        "id": 18,
+        "name": "Měsíc",
+        "type": "Velká Arkána",
+        "meaning": "Intuice, podvědomí, fantazie, iluze, nejistota",
+        "image": "18-the-moon.png"
+    },
+    {
+        "id": 19,
+        "name": "Slunce",
+        "type": "Velká Arkána",
+        "meaning": "Radost, štěstí, úspěch, zdraví, energie",
+        "image": "19-the-sun.png"
+    },
+    {
+        "id": 20,
+        "name": "Poslední soud",
+        "type": "Velká Arkána",
+        "meaning": "Osvobození, vysvobození, vítězství, odměna, osud",
+        "image": "20-judgement.png"
+    },
+    {
+        "id": 21,
+        "name": "Svět",
+        "type": "Velká Arkána",
+        "meaning": "Dokonalost, úplnost, úspěch, dokončení, cesta",
+        "image": "21-the-world.png"
+    },
+    {
+        "id": 22,
+        "name": "Eso holí",
+        "type": "Malá Arkána",
+        "subtype": "Hole",
+        "meaning": "Vůle, síla, energie, výkon, výdrž"
+    },
+    {
+        "id": 23,
+        "name": "Dvojka holí",
+        "type": "Malá Arkána",
+        "subtype": "Hole",
+        "meaning": "Rozhodnutí, rovnováha, spolupráce, přátelství, harmonie"
+    },
+    {
+        "id": 24,
+        "name": "Trojka holí",
+        "type": "Malá Arkána",
+        "subtype": "Hole",
+        "meaning": "Růst, rozvoj, plodnost, tvořivost, vize"
+    },
+    {
+        "id": 25,
+        "name": "Čtyřka holí",
+        "type": "Malá Arkána",
+        "subtype": "Hole",
+        "meaning": "Stabilita, zabezpečení, zdraví, úspěch, výsledky"
+    },
+    {
+        "id": 26,
+        "name": "Pětka holí",
+        "type": "Malá Arkána",
+        "subtype": "Hole",
+        "meaning": "Nepřátelství, ztráta, nesnáze, neúspěch, zklamání"
+    },
+    {
+        "id": 27,
+        "name": "Šestka holí",
+        "type": "Malá Arkána",
+        "subtype": "Hole",
+        "meaning": "Úspěch, vítězství, odměna, výhra, vítěz"
+    },
+    {
+        "id": 28,
+        "name": "Sedmka holí",
+        "type": "Malá Arkána",
+        "subtype": "Hole",
+        "meaning": "Překážky, zpoždění, nesnáze, nejistota, pochybnosti"
+    },
+    {
+        "id": 29,
+        "name": "Osmka holí",
+        "type": "Malá Arkána",
+        "subtype": "Hole",
+        "meaning": "Překonání, odhodlání, síla, vítězství, úspěch"
+    },
+    {
+        "id": 30,
+        "name": "Devítka holí",
+        "type": "Malá Arkána",
+        "subtype": "Hole",
+        "meaning": "Naděje, optimismus, úleva, pomoc, podpora"
+    },
+    {
+        "id": 31,
+        "name": "Desítka holí",
+        "type": "Malá Arkána",
+        "subtype": "Hole",
+        "meaning": "Zátěž, břemeno, přetížení, vyčerpání, ztráta"
+    },
+    {
+        "id": 32,
+        "name": "Princezna holí",
+        "type": "Malá Arkána",
+        "subtype": "Hole",
+        "meaning": "Zprávy, zvěsti, novinky, nápad, záměr"
+    },
+    {
+        "id": 33,
+        "name": "Princ holí",
+        "type": "Malá Arkána",
+        "subtype": "Hole",
+        "meaning": "Zprávy, zvěsti, novinky, nápad, záměr"
+    },
+    {
+        "id": 34,
+        "name": "Královna holí",
+        "type": "Malá Arkána",
+        "subtype": "Hole",
+        "meaning": "Úspěch, vítězství, odměna, výhra, vítěz"
+    },
+    {
+        "id": 35,
+        "name": "Rytíř holí",
+        "type": "Malá Arkána",
+        "subtype": "Hole",
+        "meaning": "Překážky, zpoždění, nesnáze, nejistota, pochybnosti"
+    }
+]
