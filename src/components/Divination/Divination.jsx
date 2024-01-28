@@ -1,13 +1,17 @@
 import { useState } from 'react';
+
 import Deck from './../Deck/Deck';
-// import InfoPanel from './components/InfoPanel/InfoPanel';
 import DivinationButton from './../DivinationButton/DivinationButton';
 import DivinationQuestion from './../DivinationQuestion/DivinationQuestion';
-import cardsData from '../../data/cards.json'
+import DivinationPopup from './../DivinationPopup/DivinationPopup';
+import WarningPopup from './../WarningPopup/WarningPopup';
+
+import cardsData from '../../data/cards.json';
 
 function Divination() {
     const [question, setQuestion] = useState('');
     const [cards, setCards] = useState([null, null, null]);
+    const [activePopup, setActivePopup] = useState(null); // Stavová proměnná pro aktivní popup
 
     const replaceCard = (index) => {
         const newCards = [...cards];
@@ -26,6 +30,10 @@ function Divination() {
         setQuestion(event.target.value);
     };
 
+    const closePopup = () => {
+        setActivePopup(null);
+    };
+
     const divinate = () => {
         const divination = {
             question,
@@ -33,9 +41,9 @@ function Divination() {
         };
 
         if (cards.some(card => card == null)) {
-            alert('Je nutné vytáhnout všechny tři karty.');
+            setActivePopup('warning');
         } else {
-            alert(`Věštba byla úspěšně provedena. První karta byla ${cards[0].name}, druhá karta byla ${cards[1].name} a třetí karta byla ${cards[2].name}.`);
+            setActivePopup('divination');
         }
     };
 
@@ -48,6 +56,10 @@ function Divination() {
             {/* <InfoPanel>
                 <p>Připraven na věštbu?</p>
             </InfoPanel> */}
+
+            {/* Podmíněné renderování různých popupů na základě activePopup */}
+            {activePopup === 'divination' && <DivinationPopup cards={cards} question={question} onClose={closePopup} />}
+            {activePopup === 'warning' && <WarningPopup onClose={closePopup} />}
         </>
     )
 }
