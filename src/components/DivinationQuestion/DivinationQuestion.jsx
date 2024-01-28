@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 import './divinationQuestion.scss';
 
-function DivinationQuestion() {
-    const [question, setQuestion] = useState('');
+function DivinationQuestion({ question, onQuestionChange }) {
     const [placeholder, setPlaceholder] = useState('Mám si pořídit psa?');
     const placeholders = ["Je vhodné začít podnikat?", "Najdu letos životního partnera?", "Mám se přestěhovat?", "Mám si pořídit psa?"];
     let placeholderIndex = 0;
@@ -16,10 +15,6 @@ function DivinationQuestion() {
         return () => clearInterval(interval);
     }, []);
 
-    const handleQuestionChange = (event) => {
-        setQuestion(event.target.value);
-    };
-
     return (
         <div className='divination-question'>
             <input
@@ -27,7 +22,7 @@ function DivinationQuestion() {
                 type='text'
                 placeholder={placeholder}
                 value={question}
-                onChange={handleQuestionChange}
+                onChange={onQuestionChange}
             />
         </div>
     );

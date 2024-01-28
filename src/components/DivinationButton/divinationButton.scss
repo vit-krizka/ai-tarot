@@ -1,8 +1,13 @@
-.btn {
+.divination-button {
     background-color: #031338;
     color: white;
-    padding: 10px 20px;
+    padding: 15px 25px;
     font-size: 30px;
     border: none;
     border-radius: 15px;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #5189c7;
+    }
 }

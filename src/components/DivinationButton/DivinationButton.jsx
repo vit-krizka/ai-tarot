@@ -1,8 +1,8 @@
 import './divinationButton.scss';
 
-function DivinationButton() {
+function DivinationButton({ onClick }) {
     return (
-        <button className="btn btn-primary">Vyvěštit budoucnost</button>
+        <button className="divination-button" onClick={onClick}>Vyvěštit budoucnost</button>
     )
 }
 
