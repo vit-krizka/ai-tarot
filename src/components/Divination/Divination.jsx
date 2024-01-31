@@ -7,11 +7,13 @@ import DivinationPopup from './../DivinationPopup/DivinationPopup';
 import WarningPopup from './../WarningPopup/WarningPopup';
 
 import cardsData from '../../data/cards.json';
+import gptService from '../../services/gptService';
 
 function Divination() {
     const [question, setQuestion] = useState('');
     const [cards, setCards] = useState([null, null, null]);
-    const [activePopup, setActivePopup] = useState(null); // Stavová proměnná pro aktivní popup
+    const [activePopup, setActivePopup] = useState(null);
+    const [apiResponse, setApiResponse] = useState(null);
 
     const replaceCard = (index) => {
         const newCards = [...cards];
@@ -34,7 +36,7 @@ function Divination() {
         setActivePopup(null);
     };
 
-    const divinate = () => {
+    const divinate = async () => {
         const divination = {
             question,
             cards
@@ -44,6 +46,13 @@ function Divination() {
             setActivePopup('warning');
         } else {
             setActivePopup('divination');
+
+            try {
+                const response = await gptService.sendData("Jsi věštec, který odpovídá v tajemných a mystických frázích.", `Z těchto dat: ${JSON.stringify(divination)} proveď věštbu. První karta znamená minulost, prostřední přítomnost a poslední budoucnost. Pokus se odpovědět na položenou otázku.`);
+                setApiResponse(response.choices[0].message.content.trim());
+            } catch (error) {
+                console.error('Chyba při získávání odpovědi od API', error);
+            }
         }
     };
 
@@ -58,7 +67,7 @@ function Divination() {
             </InfoPanel> */}
 
             {/* Podmíněné renderování různých popupů na základě activePopup */}
-            {activePopup === 'divination' && <DivinationPopup cards={cards} question={question} onClose={closePopup} />}
+            {activePopup === 'divination' && <DivinationPopup cards={cards} question={question} onClose={closePopup} answer={apiResponse} />}
             {activePopup === 'warning' && <WarningPopup onClose={closePopup} />}
         </>
     )
