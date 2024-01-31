@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import Header from './../Header/Header';
 import Deck from './../Deck/Deck';
 import DivinationButton from './../DivinationButton/DivinationButton';
 import DivinationQuestion from './../DivinationQuestion/DivinationQuestion';
@@ -58,6 +59,7 @@ function Divination() {
 
     return (
         <>
+            <Header />
             <Deck cards={cards} onCardClick={replaceCard} />
             <DivinationQuestion question={question} onQuestionChange={handleQuestionChange} />
             <DivinationButton onClick={divinate} />
