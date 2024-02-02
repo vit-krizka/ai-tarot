@@ -20,8 +20,8 @@ function Divination() {
         const newCards = [...cards];
         if (newCards[index] == null) {
             const availableCards = cardsData.filter(cardData => !newCards.some(card => card && card.id === cardData.id));
-            const newCard = availableCards[Math.floor(Math.random() * 47)];
-            // const newCard = availableCards[Math.floor(Math.random() * availableCards.length)];
+            // const newCard = availableCards[Math.floor(Math.random() * 47)];
+            const newCard = availableCards[Math.floor(Math.random() * availableCards.length)];
             newCards[index] = newCard;
         } else {
             newCards[index] = null;
