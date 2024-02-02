@@ -5,6 +5,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size: 30px;
+
+    input,
+    button {
+        font-size: 30px;
+    }
 
     .login {
         background-color: rgba(0, 0, 0, 0.8);
@@ -13,7 +19,26 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 15px;
         width: 95%;
         height: 95%;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 15px;
+
+
+        }
+
+        .link {
+            text-decoration: underline;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
     }
 }

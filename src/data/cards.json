@@ -158,97 +158,439 @@
         "name": "Eso holí",
         "type": "Malá Arkána",
         "subtype": "Hole",
-        "meaning": "Vůle, síla, energie, výkon, výdrž"
+        "meaning": "Vůle, síla, energie, výkon, výdrž",
+        "image": "W01-ace-of-wands.png"
     },
     {
         "id": 23,
         "name": "Dvojka holí",
         "type": "Malá Arkána",
         "subtype": "Hole",
-        "meaning": "Rozhodnutí, rovnováha, spolupráce, přátelství, harmonie"
+        "meaning": "Rozhodnutí, rovnováha, spolupráce, přátelství, harmonie",
+        "image": "W02-two-of-wands.png"
     },
     {
         "id": 24,
         "name": "Trojka holí",
         "type": "Malá Arkána",
         "subtype": "Hole",
-        "meaning": "Růst, rozvoj, plodnost, tvořivost, vize"
+        "meaning": "Růst, rozvoj, plodnost, tvořivost, vize",
+        "image": "W03-three-of-wands.png"
     },
     {
         "id": 25,
         "name": "Čtyřka holí",
         "type": "Malá Arkána",
         "subtype": "Hole",
-        "meaning": "Stabilita, zabezpečení, zdraví, úspěch, výsledky"
+        "meaning": "Stabilita, zabezpečení, zdraví, úspěch, výsledky",
+        "image": "W04-four-of-wands.png"
     },
     {
         "id": 26,
         "name": "Pětka holí",
         "type": "Malá Arkána",
         "subtype": "Hole",
-        "meaning": "Nepřátelství, ztráta, nesnáze, neúspěch, zklamání"
+        "meaning": "Nepřátelství, ztráta, nesnáze, neúspěch, zklamání",
+        "image": "W05-five-of-wands.png"
     },
     {
         "id": 27,
         "name": "Šestka holí",
         "type": "Malá Arkána",
         "subtype": "Hole",
-        "meaning": "Úspěch, vítězství, odměna, výhra, vítěz"
+        "meaning": "Úspěch, vítězství, odměna, výhra, vítěz",
+        "image": "W06-six-of-wands.png"
     },
     {
         "id": 28,
-        "name": "Sedmka holí",
+        "name": "Sedmička holí",
         "type": "Malá Arkána",
         "subtype": "Hole",
-        "meaning": "Překážky, zpoždění, nesnáze, nejistota, pochybnosti"
+        "meaning": "Překážky, zpoždění, nesnáze, nejistota, pochybnosti",
+        "image": "W07-seven-of-wands.png"
     },
     {
         "id": 29,
-        "name": "Osmka holí",
+        "name": "Osmička holí",
         "type": "Malá Arkána",
         "subtype": "Hole",
-        "meaning": "Překonání, odhodlání, síla, vítězství, úspěch"
+        "meaning": "Překonání, odhodlání, síla, vítězství, úspěch",
+        "image": "W08-eight-of-wands.png"
     },
     {
         "id": 30,
         "name": "Devítka holí",
         "type": "Malá Arkána",
         "subtype": "Hole",
-        "meaning": "Naděje, optimismus, úleva, pomoc, podpora"
+        "meaning": "Naděje, optimismus, úleva, pomoc, podpora",
+        "image": "W09-nine-of-wands.png"
     },
     {
         "id": 31,
         "name": "Desítka holí",
         "type": "Malá Arkána",
         "subtype": "Hole",
-        "meaning": "Zátěž, břemeno, přetížení, vyčerpání, ztráta"
+        "meaning": "Zátěž, břemeno, přetížení, vyčerpání, ztráta",
+        "image": "W10-ten-of-wands.png"
     },
     {
         "id": 32,
-        "name": "Princezna holí",
+        "name": "Páže holí",
         "type": "Malá Arkána",
         "subtype": "Hole",
-        "meaning": "Zprávy, zvěsti, novinky, nápad, záměr"
+        "meaning": "Zprávy, zvědavost, zvědavost, zvědavost, zvědavost",
+        "image": "W11-page-of-wands.png"
     },
     {
         "id": 33,
-        "name": "Princ holí",
+        "name": "Rytíř holí",
         "type": "Malá Arkána",
         "subtype": "Hole",
-        "meaning": "Zprávy, zvěsti, novinky, nápad, záměr"
+        "meaning": "Akce, pohyb, cesta, výlet, dobrodružství",
+        "image": "W12-knight-of-wands.png"
     },
     {
         "id": 34,
         "name": "Královna holí",
         "type": "Malá Arkána",
         "subtype": "Hole",
-        "meaning": "Úspěch, vítězství, odměna, výhra, vítěz"
+        "meaning": "Vůdčí schopnosti, síla, energie, výkon, výdrž",
+        "image": "W13-queen-of-wands.png"
     },
     {
         "id": 35,
-        "name": "Rytíř holí",
+        "name": "Král holí",
         "type": "Malá Arkána",
         "subtype": "Hole",
-        "meaning": "Překážky, zpoždění, nesnáze, nejistota, pochybnosti"
+        "meaning": "Vůdčí schopnosti, síla, energie, výkon, výdrž",
+        "image": "W14-king-of-wands.png"
+    },
+    {
+        "id": 36,
+        "name": "Eso pohárů",
+        "type": "Malá Arkána",
+        "subtype": "Poháry",
+        "meaning": "Láska, radost, štěstí, naděje, inspirace",
+        "image": "C01-ace-of-cups.png"
+    },
+    {
+        "id": 37,
+        "name": "Dvojka pohárů",
+        "type": "Malá Arkána",
+        "subtype": "Poháry",
+        "meaning": "Láska, radost, štěstí, naděje, inspirace",
+        "image": "C02-two-of-cups.png"
+    },
+    {
+        "id": 38,
+        "name": "Trojka pohárů",
+        "type": "Malá Arkána",
+        "subtype": "Poháry",
+        "meaning": "Láska, radost, štěstí, naděje, inspirace",
+        "image": "C03-three-of-cups.png"
+    },
+    {
+        "id": 39,
+        "name": "Čtyřka pohárů",
+        "type": "Malá Arkána",
+        "subtype": "Poháry",
+        "meaning": "Láska, radost, štěstí, naděje, inspirace",
+        "image": "C04-four-of-cups.png"
+    },
+    {
+        "id": 40,
+        "name": "Pětka pohárů",
+        "type": "Malá Arkána",
+        "subtype": "Poháry",
+        "meaning": "Láska, radost, štěstí, naděje, inspirace",
+        "image": "C05-five-of-cups.png"
+    },
+    {
+        "id": 41,
+        "name": "Šestka pohárů",
+        "type": "Malá Arkána",
+        "subtype": "Poháry",
+        "meaning": "Láska, radost, štěstí, naděje, inspirace",
+        "image": "C06-six-of-cups.png"
+    },
+    {
+        "id": 42,
+        "name": "Sedmička pohárů",
+        "type": "Malá Arkána",
+        "subtype": "Poháry",
+        "meaning": "Láska, radost, štěstí, naděje, inspirace",
+        "image": "C07-seven-of-cups.png"
+    },
+    {
+        "id": 43,
+        "name": "Osmička pohárů",
+        "type": "Malá Arkána",
+        "subtype": "Poháry",
+        "meaning": "Láska, radost, štěstí, naděje, inspirace",
+        "image": "C08-eight-of-cups.png"
+    },
+    {
+        "id": 44,
+        "name": "Devítka pohárů",
+        "type": "Malá Arkána",
+        "subtype": "Poháry",
+        "meaning": "Láska, radost, štěstí, naděje, inspirace",
+        "image": "C09-nine-of-cups.png"
+    },
+    {
+        "id": 45,
+        "name": "Desítka pohárů",
+        "type": "Malá Arkána",
+        "subtype": "Poháry",
+        "meaning": "Láska, radost, štěstí, naděje, inspirace",
+        "image": "C10-ten-of-cups.png"
+    },
+    {
+        "id": 46,
+        "name": "Páže pohárů",
+        "type": "Malá Arkána",
+        "subtype": "Poháry",
+        "meaning": "Láska, radost, štěstí, naděje, inspirace",
+        "image": "C11-page-of-cups.png"
+    },
+    {
+        "id": 47,
+        "name": "Rytíř pohárů",
+        "type": "Malá Arkána",
+        "subtype": "Poháry",
+        "meaning": "Láska, radost, štěstí, naděje, inspirace",
+        "image": "C12-knight-of-cups.png"
+    },
+    {
+        "id": 48,
+        "name": "Královna pohárů",
+        "type": "Malá Arkána",
+        "subtype": "Poháry",
+        "meaning": "Láska, radost, štěstí, naděje, inspirace",
+        "image": "C13-queen-of-cups.png"
+    },
+    {
+        "id": 49,
+        "name": "Eso mečů",
+        "type": "Malá Arkána",
+        "subtype": "Meče",
+        "meaning": "Bolest, ztráta, boj, zranění, bolest",
+        "image": "S01-ace-of-swords.png"
+    },
+    {
+        "id": 50,
+        "name": "Dvojka mečů",
+        "type": "Malá Arkána",
+        "subtype": "Meče",
+        "meaning": "Rozhodnutí, rovnováha, spolupráce, přátelství, harmonie",
+        "image": "S02-two-of-swords.png"
+    },
+    {
+        "id": 51,
+        "name": "Trojka mečů",
+        "type": "Malá Arkána",
+        "subtype": "Meče",
+        "meaning": "Růst, rozvoj, plodnost, tvořivost, vize",
+        "image": "S03-three-of-swords.png"
+    },
+    {
+        "id": 52,
+        "name": "Čtyřka mečů",
+        "type": "Malá Arkána",
+        "subtype": "Meče",
+        "meaning": "Stabilita, zabezpečení, zdraví, úspěch, výsledky",
+        "image": "S04-four-of-swords.png"
+    },
+    {
+        "id": 53,
+        "name": "Pětka mečů",
+        "type": "Malá Arkána",
+        "subtype": "Meče",
+        "meaning": "Nepřátelství, ztráta, nesnáze, neúspěch, zklamání",
+        "image": "S05-five-of-swords.png"
+    },
+    {
+        "id": 54,
+        "name": "Šestka mečů",
+        "type": "Malá Arkána",
+        "subtype": "Meče",
+        "meaning": "Úspěch, vítězství, odměna, výhra, vítěz",
+        "image": "S06-six-of-swords.png"
+    },
+    {
+        "id": 55,
+        "name": "Sedmička mečů",
+        "type": "Malá Arkána",
+        "subtype": "Meče",
+        "meaning": "Překážky, zpoždění, nesnáze, nejistota, pochybnosti",
+        "image": "S07-seven-of-swords.png"
+    },
+    {
+        "id": 56,
+        "name": "Osmička mečů",
+        "type": "Malá Arkána",
+        "subtype": "Meče",
+        "meaning": "Překonání, odhodlání, síla, vítězství, úspěch",
+        "image": "S08-eight-of-swords.png"
+    },
+    {
+        "id": 57,
+        "name": "Devítka mečů",
+        "type": "Malá Arkána",
+        "subtype": "Meče",
+        "meaning": "Naděje, optimismus, úleva, pomoc, podpora",
+        "image": "S09-nine-of-swords.png"
+    },
+    {
+        "id": 58,
+        "name": "Desítka mečů",
+        "type": "Malá Arkána",
+        "subtype": "Meče",
+        "meaning": "Zátěž, břemeno, přetížení, vyčerpání, ztráta",
+        "image": "S10-ten-of-swords.png"
+    },
+    {
+        "id": 59,
+        "name": "Páže mečů",
+        "type": "Malá Arkána",
+        "subtype": "Meče",
+        "meaning": "Zprávy, zvědavost, zvědavost, zvědavost, zvědavost",
+        "image": "S11-page-of-swords.png"
+    },
+    {
+        "id": 60,
+        "name": "Rytíř mečů",
+        "type": "Malá Arkána",
+        "subtype": "Meče",
+        "meaning": "Akce, pohyb, cesta, výlet, dobrodružství",
+        "image": "S12-knight-of-swords.png"
+    },
+    {
+        "id": 61,
+        "name": "Královna mečů",
+        "type": "Malá Arkána",
+        "subtype": "Meče",
+        "meaning": "Vůdčí schopnosti, síla, energie, výkon, výdrž",
+        "image": "S13-queen-of-swords.png"
+    },
+    {
+        "id": 62,
+        "name": "Král mečů",
+        "type": "Malá Arkána",
+        "subtype": "Meče",
+        "meaning": "Vůdčí schopnosti, síla, energie, výkon, výdrž",
+        "image": "S14-king-of-swords.png"
+    },
+    {
+        "id": 63,
+        "name": "Eso pentaklů",
+        "type": "Malá Arkána",
+        "subtype": "Pentakly",
+        "meaning": "Bohatství, prosperita, úspěch, zabezpečení, zisk",
+        "image": "P01-ace-of-pentacles.png"
+    },
+    {
+        "id": 64,
+        "name": "Dvojka pentaklů",
+        "type": "Malá Arkána",
+        "subtype": "Pentakly",
+        "meaning": "Rozhodnutí, rovnováha, spolupráce, přátelství, harmonie",
+        "image": "P02-two-of-pentacles.png"
+    },
+    {
+        "id": 65,
+        "name": "Trojka pentaklů",
+        "type": "Malá Arkána",
+        "subtype": "Pentakly",
+        "meaning": "Růst, rozvoj, plodnost, tvořivost, vize",
+        "image": "P03-three-of-pentacles.png"
+    },
+    {
+        "id": 66,
+        "name": "Čtyřka pentaklů",
+        "type": "Malá Arkána",
+        "subtype": "Pentakly",
+        "meaning": "Stabilita, zabezpečení, zdraví, úspěch, výsledky",
+        "image": "P04-four-of-pentacles.png"
+    },
+    {
+        "id": 67,
+        "name": "Pětka pentaklů",
+        "type": "Malá Arkána",
+        "subtype": "Pentakly",
+        "meaning": "Nepřátelství, ztráta, nesnáze, neúspěch, zklamání",
+        "image": "P05-five-of-pentacles.png"
+    },
+    {
+        "id": 68,
+        "name": "Šestka pentaklů",
+        "type": "Malá Arkána",
+        "subtype": "Pentakly",
+        "meaning": "Úspěch, vítězství, odměna, výhra, vítěz",
+        "image": "P06-six-of-pentacles.png"
+    },
+    {
+        "id": 69,
+        "name": "Sedmička pentaklů",
+        "type": "Malá Arkána",
+        "subtype": "Pentakly",
+        "meaning": "Překážky, zpoždění, nesnáze, nejistota, pochybnosti",
+        "image": "P07-seven-of-pentacles.png"
+    },
+    {
+        "id": 70,
+        "name": "Osmička pentaklů",
+        "type": "Malá Arkána",
+        "subtype": "Pentakly",
+        "meaning": "Překonání, odhodlání, síla, vítězství, úspěch",
+        "image": "P08-eight-of-pentacles.png"
+    },
+    {
+        "id": 71,
+        "name": "Devítka pentaklů",
+        "type": "Malá Arkána",
+        "subtype": "Pentakly",
+        "meaning": "Naděje, optimismus, úleva, pomoc, podpora",
+        "image": "P09-nine-of-pentacles.png"
+    },
+    {
+        "id": 72,
+        "name": "Desítka pentaklů",
+        "type": "Malá Arkána",
+        "subtype": "Pentakly",
+        "meaning": "Zátěž, břemeno, přetížení, vyčerpání, ztráta",
+        "image": "P10-ten-of-pentacles.png"
+    },
+    {
+        "id": 73,
+        "name": "Páže pentaklů",
+        "type": "Malá Arkána",
+        "subtype": "Pentakly",
+        "meaning": "Zprávy, zvědavost, zvědavost, zvědavost, zvědavost",
+        "image": "P11-page-of-pentacles.png"
+    },
+    {
+        "id": 74,
+        "name": "Rytíř pentaklů",
+        "type": "Malá Arkána",
+        "subtype": "Pentakly",
+        "meaning": "Akce, pohyb, cesta, výlet, dobrodružství",
+        "image": "P12-knight-of-pentacles.png"
+    },
+    {
+        "id": 75,
+        "name": "Královna pentaklů",
+        "type": "Malá Arkána",
+        "subtype": "Pentakly",
+        "meaning": "Vůdčí schopnosti, síla, energie, výkon, výdrž",
+        "image": "P13-queen-of-pentacles.png"
+    },
+    {
+        "id": 76,
+        "name": "Král pentaklů",
+        "type": "Malá Arkána",
+        "subtype": "Pentakly",
+        "meaning": "Vůdčí schopnosti, síla, energie, výkon, výdrž",
+        "image": "P14-king-of-pentacles.png"
     }
 ]
