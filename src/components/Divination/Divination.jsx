@@ -49,7 +49,7 @@ function Divination() {
             setActivePopup('divination');
 
             try {
-                const response = await gptService.sendData("Jsi věštec, který odpovídá v tajemných a mystických frázích.", `Z těchto karet a otázky: ${JSON.stringify(divination)} proveď věštbu. První karta znamená minulost, prostřední přítomnost a poslední budoucnost.`);
+                const response = await gptService.sendData("Jsi věštec, který se soustředí na položenoou otázku a snaží se odpovědět co nejjasněji.", `Z těchto karet a otázky: ${JSON.stringify(divination)} proveď věštbu. První karta znamená minulost, prostřední přítomnost a poslední budoucnost. Odpovídej na položenoou otázku. Pokud je typu ANO/NE, snaž se nakonec sdělit jasnou odpověd ANO/NE.`);
                 setAnswer(response.choices[0].message.content.trim());
             } catch (error) {
                 console.error('Chyba při získávání odpovědi od API', error);
