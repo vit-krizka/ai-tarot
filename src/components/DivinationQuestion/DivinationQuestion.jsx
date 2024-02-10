@@ -1,19 +1,23 @@
 import { useState, useEffect } from 'react';
+
+import { useTypewriterEffect } from './../../hooks/useTypewriterEffect'; // Předpokládá, že hook je uložen v souboru useTypewriterEffect.js
+
 import './divinationQuestion.scss';
 
 function DivinationQuestion({ question, onQuestionChange }) {
-    const [placeholder, setPlaceholder] = useState('Mám si pořídit psa?');
-    const placeholders = ["Je vhodné začít podnikat?", "Najdu letos životního partnera?", "Mám se přestěhovat?", "Mám si pořídit psa?"];
-    let placeholderIndex = 0;
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setPlaceholder(placeholders[placeholderIndex]);
-            placeholderIndex = (placeholderIndex + 1) % placeholders.length;
-        }, 5000);
-
-        return () => clearInterval(interval);
-    }, []);
+    const placeholders = [
+        "Je vhodné začít podnikat?",
+        "Najdu letos životního partnera?",
+        "Měl bych změnit zaměstnání?",
+        "Je vhodné začít studovat?",
+        "Mám se letos přestěhovat?",
+        "Mám si pořídit psa?",
+        "Je vhodná doba na nákup nemovitosti?",
+        "Mám si pořídit nové auto?",
+        "Najdu si letos nové přátele?",
+        "Máme si pořídit dítě?"
+    ];
+    const placeholder = useTypewriterEffect(placeholders, 5000);
 
     return (
         <div className='divination-question'>

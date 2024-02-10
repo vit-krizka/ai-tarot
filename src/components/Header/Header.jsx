@@ -30,12 +30,9 @@ function Header() {
                                 )}
                             </>
                         ) : (
-
                             <Link to="/login">Login</Link>
-
                         )}
                         <button className="close" onClick={() => setVisible(false)}>X</button>
-
                     </div>
                 </div>
             </div>

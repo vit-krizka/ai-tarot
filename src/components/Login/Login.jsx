@@ -34,7 +34,12 @@ function Login() {
             <div className='login'>
                 {user ? (
                     <>
-                        <div>Přihlášen jako: {user.email}</div>
+                        <div>Můj účet</div>
+                        <div>{user.displayName}</div>
+                        {user.photoURL && (
+                            <img className="userAvatar" src={user.photoURL} alt="Profilová fotka" />
+                        )}
+                        <div>E-mail: {user.email}</div>
                         <button onClick={handleSignOut}>Odhlásit se</button>
                     </>
                 ) : (
@@ -46,7 +51,7 @@ function Login() {
                     </>
 
                 )}
-                <Link to="/">Zpět</Link>
+                <Link to="/">Zpět do aplikace</Link>
             </div>
         </div>
     );
