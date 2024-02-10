@@ -38,10 +38,12 @@ function Divination() {
     };
 
     const divinate = async () => {
+        setAnswer(null);
         const divination = {
             question,
             cards
         };
+        console.log(divination);
 
         if (cards.some(card => card == null)) {
             setActivePopup('warning');
