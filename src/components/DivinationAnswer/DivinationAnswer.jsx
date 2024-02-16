@@ -33,10 +33,11 @@ function DivinationAnswer() {
                         "celkovyVyznam": "Zde odpověz na položenou otázku v kontextu všech tří karet ccv rozsahu dvou až pěti odstavců.",
                         "skalaAnoNe": "Zde uveď číslo od 0 do 1, a to na škále od 0 (NE) do 1 (ANO) podle toho, jak moc je odpověď ANO nebo NE pravděpodobná.",
                         "shrnuti": "Zde stručně shrň svou odpověď na položenou otázku.",
-                        "doplnujiciOtazka": "Sem napiš stručnou vhodnou doplňující otázku pro danou věštbu.",
-                        "druhaDoplnujiciOtazka": "Sem napiš stručnou doplňující otázku ve stylu "Co když neuposlechnu rady dle věštby?". Např. pokud jsem se ptal na to, zda se mám rozvést a věštba mi radí, že ne, zeptej se "A co když se rozvedu?"."
-                    }
-                    `;
+                        "doplnujiciOtazka": "Sem vymysli stručnou otázku na věštce týkající se této věštby, na kterou lze odpovědět ano, či ne, která by mohla tazatele zajímat.",
+                        "odpovedNaDoplnujiciOtazku": "Zde vyvěšti odpověď na doplňující otázku dle daných karet.",
+                        "druhaDoplnujiciOtazka": "Sem vymysli stručnou otázku ve stylu, co když neuposlechnu rady dle věštby. Např. pokud jsem se ptal na to, zda se mám rozvést a věštba mi radí, že ne, zeptej se, co se stane, když se rozvedu.",
+                        "odpovedNaDruhouDoplnujiciOtazku": "Zde vyvěšti odpověď na druhou doplňující otázku dle daných karet."
+                    }`;
 
                     console.log(prompt);
 
@@ -44,6 +45,8 @@ function DivinationAnswer() {
                     const jsonString = response.choices[0].message.content.trim();
                     setAnswer(JSON.parse(jsonString));
                     localStorage.setItem('divinationAnswer', jsonString);
+
+                    console.log(answer);
                 } catch (error) {
                     console.error('Chyba při získávání odpovědi od API', error);
                 }
