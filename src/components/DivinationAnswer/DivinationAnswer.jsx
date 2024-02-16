@@ -43,10 +43,8 @@ function DivinationAnswer() {
 
                     const response = await gptService.sendData("Jsi věštec, který se soustředí na položenoou otázku a snaží se odpovědět co nejjasněji. Většina věšteb je příliš pozitivních a motivačních; ty se skutečně snažíš být více realistický.", prompt);
                     const jsonString = response.choices[0].message.content.trim();
-                    setAnswer(JSON.parse(jsonString));
                     localStorage.setItem('divinationAnswer', jsonString);
-
-                    console.log(answer);
+                    setAnswer(JSON.parse(jsonString));
                 } catch (error) {
                     console.error('Chyba při získávání odpovědi od API', error);
                 }
