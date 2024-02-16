@@ -12,14 +12,15 @@ function Header() {
 
     if (visible) {
         return (
-            <div className='header-wrapper'>
+            <header className='header-wrapper'>
                 <div className='header'>
                     <h1 className="title">
-                        <Link to="/">Tarot</Link>
+                        <div onClick={() => setVisible(false)}>Tarot</div>
                     </h1>
                     <div className="menu">
-                        <Link to="/divination">Věštby</Link>
-                        <Link to="/divination">Karty</Link>
+                        <Link to="/divinations">Věštby</Link>
+                        <Link to="/cards">Karty</Link>
+                        <Link to="/blog">Články</Link>
                         <Link to="/about">O aplikaci</Link>
                     </div>
                     <div className="buttons">
@@ -32,17 +33,16 @@ function Header() {
                         ) : (
                             <Link to="/login">Login</Link>
                         )}
-                        <button className="close" onClick={() => setVisible(false)}>X</button>
                     </div>
                 </div>
-            </div>
+            </header>
         );
     } else {
         return (
             <div className='header-wrapper hide'>
-                <div className='header'>
-                    <button className="close" onClick={() => setVisible(true)}>Menu</button>
-                </div>
+                <h1 className="title">
+                    <div onClick={() => setVisible(true)}>Tarot</div>
+                </h1>
             </div>);
     }
 

@@ -1,5 +1,7 @@
+@import './../../scss/variables';
+
 .divination-button {
-    background-color: #031338;
+    background-color: $dark-blue;
     color: white;
     padding: 15px 25px;
     font-size: 30px;
@@ -8,6 +10,6 @@
 
     &:hover {
         cursor: pointer;
-        background-color: #5189c7;
+        background-color: $soft-blue;
     }
 }

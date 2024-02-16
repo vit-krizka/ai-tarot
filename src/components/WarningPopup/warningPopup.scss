@@ -1,17 +1,17 @@
+@import "./../../scss/variables";
+
 .warning-popup-wrapper {
-    background-color: #fff;
+    background-color: $red;
     color: #000;
-    border: 2px solid black;
-    border-radius: 15px;
     padding: 20px;
-    width: auto;
+    width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0px;
+    font-size: x-large;
+    text-transform: uppercase;
 
     .close {
         position: absolute;

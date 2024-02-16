@@ -4,6 +4,7 @@ const gptService = {
     sendData: async (context, prompt) => {
         const requestData = {
             "model": "gpt-3.5-turbo",
+            // "model": "gpt-4",
             "messages": [
                 { "role": "system", "content": context },
                 { "role": "user", "content": prompt }

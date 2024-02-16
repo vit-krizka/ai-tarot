@@ -1,36 +1,50 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import Header from './../Header/Header';
 import Deck from './../Deck/Deck';
 import DivinationButton from './../DivinationButton/DivinationButton';
 import DivinationQuestion from './../DivinationQuestion/DivinationQuestion';
-import DivinationPopup from './../DivinationPopup/DivinationPopup';
 import WarningPopup from './../WarningPopup/WarningPopup';
 
 import cardsData from '../../data/cards.json';
-import gptService from '../../services/gptService';
+
+import './divination.scss';
 
 function Divination() {
     const [question, setQuestion] = useState('');
     const [cards, setCards] = useState([null, null, null]);
-    const [answer, setAnswer] = useState(null);
     const [activePopup, setActivePopup] = useState(null);
+
+    const navigate = useNavigate();
+
+    const savedAnswer = localStorage.getItem('divinationAnswer');
+    if (savedAnswer) {
+        localStorage.removeItem('divinationAnswer');
+    }
 
     const replaceCard = (index) => {
         const newCards = [...cards];
         if (newCards[index] == null) {
             const availableCards = cardsData.filter(cardData => !newCards.some(card => card && card.id === cardData.id));
-            // const newCard = availableCards[Math.floor(Math.random() * 47)];
             const newCard = availableCards[Math.floor(Math.random() * availableCards.length)];
             newCards[index] = newCard;
         } else {
             newCards[index] = null;
         }
         setCards(newCards);
+
+        if (activePopup === 'warning-cards' || activePopup === 'warning-question-and-cards') {
+            setActivePopup(null);
+        }
     };
 
     const handleQuestionChange = (event) => {
         setQuestion(event.target.value);
+
+        if (activePopup === 'warning-question' || activePopup === 'warning-question-and-cards') {
+            setActivePopup(null);
+        }
     };
 
     const closePopup = () => {
@@ -38,41 +52,35 @@ function Divination() {
     };
 
     const divinate = async () => {
-        setAnswer(null);
-        const divination = {
-            question,
-            cards
-        };
-        console.log(divination);
+        let isQuestionEmpty = (question.trim() === '' || question === null);
+        let areCardsEmpty = cards.some(card => card == null);
 
-        if (cards.some(card => card == null)) {
-            setActivePopup('warning');
+        if (isQuestionEmpty && areCardsEmpty) {
+            setActivePopup('warning-question-and-cards');
+        } else if (isQuestionEmpty && !areCardsEmpty) {
+            setActivePopup('warning-question');
+        } else if (areCardsEmpty && !isQuestionEmpty) {
+            setActivePopup('warning-cards');
         } else {
-            setActivePopup('divination');
-
-            try {
-                const response = await gptService.sendData("Jsi věštec, který se soustředí na položenoou otázku a snaží se odpovědět co nejjasněji.", `Z těchto karet a otázky: ${JSON.stringify(divination)} proveď věštbu. První karta znamená minulost, prostřední přítomnost a poslední budoucnost. Odpovídej na položenoou otázku. Pokud je typu ANO/NE, snaž se nakonec sdělit jasnou odpověd ANO/NE.`);
-                setAnswer(response.choices[0].message.content.trim());
-            } catch (error) {
-                console.error('Chyba při získávání odpovědi od API', error);
-            }
+            navigate('/divination/answer', { state: { question, cards } });
         }
     };
 
     return (
         <>
             <Header />
-            <Deck cards={cards} onCardClick={replaceCard} />
-            <DivinationQuestion question={question} onQuestionChange={handleQuestionChange} />
-            <DivinationButton onClick={divinate} />
+            <main className="divination-wrapper">
+                <div className="divination">
+                    <Deck cards={cards} onCardClick={replaceCard} />
+                    <DivinationQuestion question={question} onQuestionChange={handleQuestionChange} />
+                    <DivinationButton onClick={divinate} />
 
-            {/* <InfoPanel>
-                <p>Připraven na věštbu?</p>
-            </InfoPanel> */}
-
-            {/* Podmíněné renderování různých popupů na základě activePopup */}
-            {activePopup === 'divination' && <DivinationPopup cards={cards} question={question} onClose={closePopup} answer={answer} />}
-            {activePopup === 'warning' && <WarningPopup onClose={closePopup} />}
+                    {/* Podmíněné renderování různých popupů na základě activePopup */}
+                    {activePopup === 'warning-cards' && <WarningPopup onClose={closePopup} text="Musíte zvolit všechny tři karty." />}
+                    {activePopup === 'warning-question' && <WarningPopup onClose={closePopup} text="Musíte položit otázku." />}
+                    {activePopup === 'warning-question-and-cards' && <WarningPopup onClose={closePopup} text="Musíte položit otázku a zvolit všechny tři karty." />}
+                </div>
+            </main>
         </>
     )
 }

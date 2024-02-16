@@ -1,10 +1,10 @@
 import './warningPopup.scss'
 
-function WarningPopup({ onClose }) {
+function WarningPopup({ onClose, text }) {
     return (
         <div className='warning-popup-wrapper'>
             <div className='warning-popup'>
-                <div>Musíte vybrat tři karty</div>
+                <div>{text}</div>
             </div>
             <div className='close' onClick={onClose}>X</div>
         </div>

@@ -14,3 +14,6 @@ https://www.trustedtarot.com/card-meanings/
 @media (min-width: 992px) and (max-width: 1199px) { }
 @media (min-width: 768px) and (max-width: 991px) { }
 @media (max-width: 767px) { }
+
+VÝKLADDY
+https://probud.se/tarot1/vyklady

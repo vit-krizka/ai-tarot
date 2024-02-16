@@ -1,3 +1,6 @@
+@import './scss/variables';
+@import './scss/reset';
+
 @media (min-width: 768px) {
 
     html,
@@ -7,23 +10,37 @@
         padding: 0;
         overflow: hidden;
         background-image: url('./assets/magic-desk.png');
-        // background-image: url('./assets/magicDesk.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
     }
 
     .app {
-        position: fixed;
-        top: 0;
-        left: 0;
         width: 100%;
-        height: 100%;
+        height: 100vh;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
     }
 }
 
-@media (max-width: 767px) {}
+@media (max-width: 767px) {
+
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        background-image: url('./assets/magic-desk.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .app {
+        min-height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

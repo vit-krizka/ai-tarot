@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-import { useTypewriterEffect } from './../../hooks/useTypewriterEffect'; // Předpokládá, že hook je uložen v souboru useTypewriterEffect.js
+import { useTypewriterEffect } from './../../hooks/useTypewriterEffect';
 
 import './divinationQuestion.scss';
 
