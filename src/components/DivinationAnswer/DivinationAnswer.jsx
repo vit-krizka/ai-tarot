@@ -33,8 +33,8 @@ function DivinationAnswer() {
                         "celkovyVyznam": "Zde odpověz na položenou otázku v kontextu všech tří karet ccv rozsahu dvou až pěti odstavců.",
                         "skalaAnoNe": "Zde uveď číslo od 0 do 1, a to na škále od 0 (NE) do 1 (ANO) podle toho, jak moc je odpověď ANO nebo NE pravděpodobná.",
                         "shrnuti": "Zde stručně shrň svou odpověď na položenou otázku.",
-                        "doplnujiciOtazka": "Sem napiš pouze jednu stručnou vhodnou doplňující otázku pro danou věštbu."
-                        "druhaDoplnujiciOtazka": "Sem napiš jednu stručnou vhodnou doplňující otázku ve stylu "Co když neuposlechnu rady dle věštby?". Např. pokud jsem se ptal na to, zda se mám rozvést a věštba mi radí, že ne, zeptej se "A co když se rozvedu?"."
+                        "doplnujiciOtazka": "Sem napiš stručnou vhodnou doplňující otázku pro danou věštbu.",
+                        "druhaDoplnujiciOtazka": "Sem napiš stručnou doplňující otázku ve stylu "Co když neuposlechnu rady dle věštby?". Např. pokud jsem se ptal na to, zda se mám rozvést a věštba mi radí, že ne, zeptej se "A co když se rozvedu?"."
                     }
                     `;
 
