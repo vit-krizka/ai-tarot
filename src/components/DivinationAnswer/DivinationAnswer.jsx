@@ -38,6 +38,8 @@ function DivinationAnswer() {
                     }
                     `;
 
+                    console.log(prompt);
+
                     const response = await gptService.sendData("Jsi věštec, který se soustředí na položenoou otázku a snaží se odpovědět co nejjasněji. Většina věšteb je příliš pozitivních a motivačních; ty se skutečně snažíš být více realistický.", prompt);
                     const jsonString = response.choices[0].message.content.trim();
                     setAnswer(JSON.parse(jsonString));
