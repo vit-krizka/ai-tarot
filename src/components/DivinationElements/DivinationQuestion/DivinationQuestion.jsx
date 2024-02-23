@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-import { useTypewriterEffect } from './../../hooks/useTypewriterEffect';
+import { useTypewriterEffect } from './../../../hooks/useTypewriterEffect';
 
 import './divinationQuestion.scss';
 

@@ -33,7 +33,7 @@ function Divinations() {
                             <DivinationDescription
                                 name="Minulost, přítomnost a budoucnost"
                                 description="Zjistěte, co vás čeká v nejbližší budoucnosti. Můžete si vybrat oblast života, např. práce, vztahy či zdraví"
-                                link="/"
+                                link="/future-divination"
                             />
                             <DivinationDescription
                                 name="Maltézský kříž"

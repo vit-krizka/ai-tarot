@@ -1,9 +1,9 @@
 import { useLocation } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
-import Header from './../Header/Header';
-import { useAnimateBar } from './../../hooks/useAnimateBar';
+import Header from './../../Header/Header';
+import { useAnimateBar } from './../../../hooks/useAnimateBar';
 
-import gptService from '../../services/gptService';
+import gptService from './../../../services/gptService';
 
 import './divinationAnswer.scss';
 

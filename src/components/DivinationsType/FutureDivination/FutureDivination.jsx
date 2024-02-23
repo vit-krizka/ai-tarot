@@ -1,18 +1,18 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import Header from './../Header/Header';
-import Deck from './../Deck/Deck';
-import DivinationButton from './../DivinationButton/DivinationButton';
-import DivinationQuestion from './../DivinationQuestion/DivinationQuestion';
-import WarningPopup from './../WarningPopup/WarningPopup';
+import Header from '../../Header/Header';
+import Deck from '../../Deck/Deck';
+import DivinationButton from '../../DivinationElements/DivinationButton/DivinationButton';
+import DivinationTypeSelect from '../../DivinationElements/DivinationTypeSelect/DivinationTypeSelect';
+import WarningPopup from '../../WarningPopup/WarningPopup';
 
-import cardsData from '../../data/cards.json';
+import cardsData from '../../../data/cards.json';
 
-import './divination.scss';
+import './futureDivination.scss';
 
-function Divination() {
-    const [question, setQuestion] = useState('');
+function FutureDivination() {
+    const [divinationType, setDivinationType] = useState('personal');
     const [cards, setCards] = useState([null, null, null]);
     const [activePopup, setActivePopup] = useState(null);
 
@@ -34,35 +34,26 @@ function Divination() {
         }
         setCards(newCards);
 
-        if (activePopup === 'warning-cards' || activePopup === 'warning-question-and-cards') {
+        if (activePopup === 'warning-cards') {
             setActivePopup(null);
         }
     };
 
-    const handleQuestionChange = (event) => {
-        setQuestion(event.target.value);
-
-        if (activePopup === 'warning-question' || activePopup === 'warning-question-and-cards') {
-            setActivePopup(null);
-        }
-    };
+    const handleDivinationTypeChange = (type) => {
+        setDivinationType(type);
+    }
 
     const closePopup = () => {
         setActivePopup(null);
     };
 
     const divinate = async () => {
-        let isQuestionEmpty = (question.trim() === '' || question === null);
         let areCardsEmpty = cards.some(card => card == null);
 
-        if (isQuestionEmpty && areCardsEmpty) {
-            setActivePopup('warning-question-and-cards');
-        } else if (isQuestionEmpty && !areCardsEmpty) {
-            setActivePopup('warning-question');
-        } else if (areCardsEmpty && !isQuestionEmpty) {
+        if (areCardsEmpty) {
             setActivePopup('warning-cards');
         } else {
-            navigate('/divination/answer', { state: { question, cards } });
+            navigate('/future-divination/answer', { state: { divinationType, cards } });
         }
     };
 
@@ -72,17 +63,15 @@ function Divination() {
             <main className="divination-wrapper">
                 <div className="divination">
                     <Deck cards={cards} onCardClick={replaceCard} />
-                    <DivinationQuestion question={question} onQuestionChange={handleQuestionChange} />
+                    <DivinationTypeSelect onDivinationTypeChange={handleDivinationTypeChange} />
                     <DivinationButton onClick={divinate} />
 
                     {/* Podmíněné renderování různých popupů na základě activePopup */}
                     {activePopup === 'warning-cards' && <WarningPopup onClose={closePopup} text="Musíte zvolit všechny tři karty." />}
-                    {activePopup === 'warning-question' && <WarningPopup onClose={closePopup} text="Musíte položit otázku." />}
-                    {activePopup === 'warning-question-and-cards' && <WarningPopup onClose={closePopup} text="Musíte položit otázku a zvolit všechny tři karty." />}
                 </div>
             </main>
         </>
     )
 }
 
-export default Divination;
+export default FutureDivination;

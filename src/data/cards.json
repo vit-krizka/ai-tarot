@@ -4,6 +4,7 @@
         "name": "Blázen",
         "type": "Velká Arkána",
         "meaning": "Začátky, nevinnost, spontánnost, svobodný duch",
+        "meaningInLove": "Začátek nového vztahu, nezávaznost, svoboda, nezávislost, nevinnost",
         "image": "00-the-fool.png"
     },
     {
@@ -11,6 +12,7 @@
         "name": "Mág",
         "type": "Velká Arkána",
         "meaning": "Síla, dovednost, koncentrace, akce, vynalézavost",
+        "meaningInLove": "Vášeň, přitažlivost, sexuální energie, kreativita, výzva",
         "image": "01-the-magician.png"
     },
     {
@@ -18,6 +20,7 @@
         "name": "Velekněžka",
         "type": "Velká Arkána",
         "meaning": "Intuice, moudrost, podvědomí, ženskost, psychické schopnosti",
+        "meaningInLove": "Tajemství, nevědomí, intuice, moudrost, tajemství",
         "image": "02-the-high-priestess.png"
     },
     {
@@ -25,6 +28,7 @@
         "name": "Císařovna",
         "type": "Velká Arkána",
         "meaning": "Plodnost, ženskost, krása, příroda, hojnost",
+        "meaningInLove": "Matka, plodnost, ženskost, krása, příroda",
         "image": "03-the-empress.png"
     },
     {
