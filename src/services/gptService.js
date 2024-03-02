@@ -1,4 +1,4 @@
-const BASE_URL = 'https://api.openai.com/v1/chat/completions';
+const url = import.meta.env.VITE_OPENAI_API_URL;
 
 const gptService = {
     sendData: async (context, prompt) => {
@@ -14,7 +14,7 @@ const gptService = {
         };
 
         try {
-            const response = await fetch(BASE_URL, {
+            const response = await fetch(url, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
