@@ -26,7 +26,7 @@ function DivinationAnswer() {
             case 'family':
                 return 'rodiny a rodinných vztahů';
             case 'sex':
-                return 'sexualního života a vztahů';
+                return 'sexuálního života a vztahů';
             default:
                 return 'budoucnosti';
         }
@@ -50,7 +50,7 @@ function DivinationAnswer() {
                         "vyznamPrvniKarty": "Zde obecně popiš význam první karty a poté vysvětli, jaký význam týkající se ${nameDivinationType(divinationType)} může tato karta obecně mít.",
                         "vyznamDruheKarty": "Zde obecně popiš význam druhé karty a poté vysvětli, jaký význam týkající se ${nameDivinationType(divinationType)} může tato karta obecně mít.",
                         "vyznamTretiKarty": "Zde obecně popiš význam třetí karty a poté vysvětli, jaký význam týkající se ${nameDivinationType(divinationType)} může tato karta obecně mít.",
-                        "celkovyVyznam": "Zde podrobně popiš, co plyne pro oblast ${nameDivinationType(divinationType)} ze všech vyložených karet. Nezohledňuj žádné jiné faktory, např. etiku, náboženství či právo, ale vycházej výhradně z vyložených karet."
+                        "celkovyVyznam": "Zde podrobně popiš, co plyne pro oblast ${nameDivinationType(divinationType)} ze všech vyložených karet. Vycházej výhradně z vyložených karet."
                     }`;
 
                     console.log(prompt);

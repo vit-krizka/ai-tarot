@@ -12,6 +12,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        gap: 15px;
 
         .name {
             margin: 0;
@@ -21,8 +22,12 @@
             margin: 0;
         }
 
+        .image {
+            width: 100%;
+            height: auto;
+        }
+
         .button {
-            margin-top: 20px;
             background-color: $red;
             color: white;
             padding: 10px 20px;

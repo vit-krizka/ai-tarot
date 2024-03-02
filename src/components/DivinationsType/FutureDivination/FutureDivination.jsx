@@ -64,7 +64,7 @@ function FutureDivination() {
                 <div className="divination">
                     <Deck cards={cards} onCardClick={replaceCard} />
                     <DivinationTypeSelect onDivinationTypeChange={handleDivinationTypeChange} />
-                    <DivinationButton onClick={divinate} />
+                    <DivinationButton onClick={divinate} text="Vyvěštit budoucnost" />
 
                     {/* Podmíněné renderování různých popupů na základě activePopup */}
                     {activePopup === 'warning-cards' && <WarningPopup onClose={closePopup} text="Musíte zvolit všechny tři karty." />}

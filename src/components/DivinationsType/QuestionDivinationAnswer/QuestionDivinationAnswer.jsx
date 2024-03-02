@@ -1,13 +1,13 @@
 import { useLocation } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
-import Header from './../../Header/Header';
-import { useAnimateBar } from './../../../hooks/useAnimateBar';
+import Header from '../../Header/Header';
+import { useAnimateBar } from '../../../hooks/useAnimateBar';
 
-import gptService from './../../../services/gptService';
+import gptService from '../../../services/gptService';
 
-import './divinationAnswer.scss';
+import './questionDivinationAnswer.scss';
 
-function DivinationAnswer() {
+function QuestionDivinationAnswer() {
     const location = useLocation();
     const { question, cards } = location.state || {};
     const [answer, setAnswer] = useState(null);
@@ -30,7 +30,7 @@ function DivinationAnswer() {
                         "vyznamPrvniKarty": "Zde obecně popiš význam první karty a poté vysvětli, jaký význam může tato karta mít v kontextu položené otázky.",
                         "vyznamDruheKarty": "Zde obecně popiš význam druhé karty a poté vysvětli, jaký význam může tato karta mít v kontextu položené otázky.",
                         "vyznamTretiKarty": "Zde obecně popiš význam třetí karty a poté vysvětli, jaký význam může tato karta mít v kontextu položené otázky.",
-                        "celkovyVyznam": "Zde vyvěšti odpověď na položenou otázku ze všech vyložených karet v rozsahu dvou až pěti odstavců. Nezohledňuj žádné jiné faktory, např. etiku, náboženství či právo, ale vycházej výhradně z vyložených karet.",
+                        "celkovyVyznam": "Zde vyvěšti odpověď na položenou otázku ze všech vyložených karet. Vycházej výhradně z vyložených karet.",
                         "skalaAnoNe": "Zde uveď číslo od 0 do 1, a to na škále od 0 (NE) do 1 (ANO) podle toho, jak moc je odpověď ANO nebo NE pravděpodobná dle vyložených karet.",
                         "shrnuti": "Zde stručně shrň svou výše uvedenou odpověď.",
                         "doplnujiciOtazka": "Zde vymysli stručnou otázku na věštce týkající se této věštby, na kterou lze odpovědět ano, či ne, která by mohla tazatele dále zajímat.",
@@ -146,4 +146,4 @@ function DivinationAnswer() {
     )
 }
 
-export default DivinationAnswer;
+export default QuestionDivinationAnswer;

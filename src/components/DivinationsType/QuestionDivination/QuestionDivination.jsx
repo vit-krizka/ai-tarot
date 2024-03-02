@@ -9,9 +9,9 @@ import WarningPopup from '../../WarningPopup/WarningPopup';
 
 import cardsData from '../../../data/cards.json';
 
-import './divination.scss';
+import './questionDivination.scss';
 
-function Divination() {
+function QuestionDivination() {
     const [question, setQuestion] = useState('');
     const [cards, setCards] = useState([null, null, null]);
     const [activePopup, setActivePopup] = useState(null);
@@ -20,6 +20,7 @@ function Divination() {
 
     const savedAnswer = localStorage.getItem('divinationAnswer');
     if (savedAnswer) {
+        // TODO: použít sessionStorage
         localStorage.removeItem('divinationAnswer');
     }
 
@@ -62,7 +63,7 @@ function Divination() {
         } else if (areCardsEmpty && !isQuestionEmpty) {
             setActivePopup('warning-cards');
         } else {
-            navigate('/divination/answer', { state: { question, cards } });
+            navigate('/question-divination/answer', { state: { question, cards } });
         }
     };
 
@@ -73,7 +74,7 @@ function Divination() {
                 <div className="divination">
                     <Deck cards={cards} onCardClick={replaceCard} />
                     <DivinationQuestion question={question} onQuestionChange={handleQuestionChange} />
-                    <DivinationButton onClick={divinate} />
+                    <DivinationButton onClick={divinate} text="Poradit se s věštcem" />
 
                     {/* Podmíněné renderování různých popupů na základě activePopup */}
                     {activePopup === 'warning-cards' && <WarningPopup onClose={closePopup} text="Musíte zvolit všechny tři karty." />}
@@ -85,4 +86,4 @@ function Divination() {
     )
 }
 
-export default Divination;
+export default QuestionDivination;

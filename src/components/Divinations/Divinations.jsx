@@ -27,11 +27,13 @@ function Divinations() {
                         <Slider {...settings}>
                             <DivinationDescription
                                 name="Odpovědi na ANO/NE otázky"
+                                image='src/assets/question-divination.webp'
                                 description="Položte věštci otázku, na kterou lze odpovědět ano, či ne. Na základě tří tarotových karet se věštec pokusí jasně odpovědět."
-                                link="/"
+                                link="/question-divination"
                             />
                             <DivinationDescription
                                 name="Minulost, přítomnost a budoucnost"
+                                image='src/assets/future-divination.webp'
                                 description="Zjistěte, co vás čeká v nejbližší budoucnosti. Můžete si vybrat oblast života, např. práce, vztahy či zdraví"
                                 link="/future-divination"
                             />
