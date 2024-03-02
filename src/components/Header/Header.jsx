@@ -1,14 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from './../../firebaseConfig';
-
 import './header.scss';
 
 function Header() {
     const [visible, setVisible] = useState(true);
-    const [user, loading, error] = useAuthState(auth);
 
     if (visible) {
         return (
@@ -24,15 +20,7 @@ function Header() {
                         <Link to="/about">O aplikaci</Link>
                     </div>
                     <div className="buttons">
-                        {user ? (
-                            <>
-                                {user.photoURL && (
-                                    <Link to="/login"><img className="userAvatar" src={user.photoURL} alt="Profilová fotka" /></Link>
-                                )}
-                            </>
-                        ) : (
-                            <Link to="/login">Login</Link>
-                        )}
+                        <Link to="/login">Login</Link>
                     </div>
                 </div>
             </header>

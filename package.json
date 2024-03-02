@@ -10,11 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "firebase": "^10.7.2",
     "openai": "^4.28.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-firebase-hooks": "^5.1.1",
     "react-router-dom": "^6.21.3",
     "react-slick": "^0.30.1",
     "sass": "^1.70.0",
