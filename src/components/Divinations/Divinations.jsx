@@ -7,6 +7,8 @@ import "slick-carousel/slick/slick-theme.css";
 
 import './divinations.scss';
 
+import questionDivinationImage from './../../assets/divination-types/question-divination.webp';
+
 function Divinations() {
     const settings = {
         dots: true,
@@ -67,7 +69,7 @@ function Divinations() {
                             <DivinationDescription
                                 name="Źivotní rozhodnutí"
                                 type="Tarot"
-                                image='/assets/divination-types/question-divination.webp'
+                                image={questionDivinationImage}
                                 description="Položte věštci otázku, na kterou lze odpovědět ano, či ne. Na základě tarotových karet věštec poskytne odpověď."
                                 button="Vyložit karty"
                                 link="/question-divination"
@@ -75,7 +77,7 @@ function Divinations() {
                             <DivinationDescription
                                 name="Minulost, přítomnost a budoucnost"
                                 type="Tarot"
-                                image='/assets/divination-types/future-divination.webp'
+                                image='/src/assets/divination-types/future-divination.webp'
                                 description="Zjistěte, co vás čeká v nejbližší budoucnosti. Můžete si vybrat oblast života, např. pracovní vztahy či osobní život."
                                 button="Vyložit karty"
                                 link="/future-divination"
@@ -84,7 +86,7 @@ function Divinations() {
                             <DivinationDescription
                                 name="Výklad snů"
                                 type="Snář"
-                                image='src/assets/divination-types/dream-meaning.webp'
+                                image='/src/assets/divination-types/dream-meaning.webp'
                                 description="Popište věštci sen, který se vám zdál. Věštec vám pomůže porozumět významu vašeho snu."
                                 button="Vyložit sen"
                                 link="/dream-meaning"
@@ -93,7 +95,7 @@ function Divinations() {
                             <DivinationDescription
                                 name="Věštecká koule"
                                 type="Věštecká koule"
-                                image='src/assets/divination-types/oracle-ball.webp'
+                                image='/src/assets/divination-types/oracle-ball.webp'
                                 description="Zeptejte se věštecké koule na otázku, na kterou potřebujete odpověď. Věštecká koule vám poskytne odpověď."
                                 button="Pozřít do koule"
                                 link="/oracle-ball"
@@ -102,7 +104,7 @@ function Divinations() {
                             <DivinationDescription
                                 name="Denní horoskop"
                                 type="Horoskop"
-                                image='src/assets/divination-types/day-horoscope.webp'
+                                image='/src/assets/divination-types/day-horoscope.webp'
                                 description="Zjistěte, co vás čeká v nejbližší budoucnosti dle vašeho znamení zvěrokruhu."
                                 button="Přečíst horoskop"
                                 link="/day-horoscope"
@@ -111,7 +113,7 @@ function Divinations() {
                             <DivinationDescription
                                 name="Roční horoskop"
                                 type="Horoskop"
-                                image='src/assets/divination-types/year-horoscope.webp'
+                                image='/src/assets/divination-types/year-horoscope.webp'
                                 description="Zjistěte, co vás letos čeká dle vašeho znamení zvěrokruhu."
                                 button="Přečíst horoskop"
                                 link="/year-horoscope"
