@@ -15,5 +15,7 @@ https://www.trustedtarot.com/card-meanings/
 @media (min-width: 768px) and (max-width: 991px) { }
 @media (max-width: 767px) { }
 
+SUPABSE
+
 VÝKLADDY
 https://probud.se/tarot1/vyklady
