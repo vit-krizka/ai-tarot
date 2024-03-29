@@ -30,31 +30,22 @@ function Login() {
     return (
         <div className='login-wrapper'>
             <div className='login'>
-                <h2>Přihlášení</h2>
+                <h1>Přihlášení</h1>
                 <form onSubmit={handleLogin}>
-                    <div>
-                        <label htmlFor="email">E-mail:</label>
-                        <input
-                            id="email"
-                            type="email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            required
-                        />
-                    </div>
-                    <div>
-                        <label htmlFor="password">Heslo:</label>
-                        <input
-                            id="password"
-                            type="password"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                            required
-                        />
-                    </div>
+
+                    <label htmlFor="email">E-mail:</label>
+                    <input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+
+                    <label htmlFor="password">Heslo:</label>
+                    <input id="password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} required
+                    />
+
                     <button type="submit">Přihlásit se</button>
                 </form>
-                <Link to="/">Zpět do aplikace</Link>
+                <div className="register">
+                    <p>Memáte účet? <Link to="/register">Zaregistrujte se.</Link></p>
+                </div>
+                <Link className='close' to="/">×</Link>
             </div>
         </div>
     );

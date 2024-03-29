@@ -133,8 +133,8 @@ function QuestionDivinationAnswer() {
                                     <div className="decision-number">{translateDecisionScale(answer.skalaAnoNe)}</div>
                                 </div>
                                 <div>{answer.shrnuti}</div>
-                                <button className="additional-question">{answer.doplnujiciOtazka}</button>
-                                <button className="additional-question">{answer.druhaDoplnujiciOtazka}</button>
+                                {/* <button className="additional-question">{answer.doplnujiciOtazka}</button>
+                                <button className="additional-question">{answer.druhaDoplnujiciOtazka}</button> */}
                             </>
                         ) : (
                             <div className="loader">Věštba se připravuje</div>

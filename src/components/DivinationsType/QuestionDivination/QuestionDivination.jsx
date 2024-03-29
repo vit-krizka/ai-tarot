@@ -7,7 +7,7 @@ import DivinationButton from '../../DivinationElements/DivinationButton/Divinati
 import DivinationQuestion from '../../DivinationElements/DivinationQuestion/DivinationQuestion';
 import WarningPopup from '../../WarningPopup/WarningPopup';
 
-import cardsData from '../../../data/cards.json';
+import cardsData from '../../../data/cards';
 
 import './questionDivination.scss';
 

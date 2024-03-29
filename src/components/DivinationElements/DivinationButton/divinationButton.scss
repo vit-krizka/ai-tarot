@@ -8,6 +8,10 @@
     border: none;
     border-radius: 15px;
 
+    @media (max-width: 767px) {
+        margin-bottom: 20px;
+    }
+
     &:hover {
         cursor: pointer;
         background-color: $soft-blue;

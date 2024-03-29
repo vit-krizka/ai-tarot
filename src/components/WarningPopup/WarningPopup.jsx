@@ -6,7 +6,7 @@ function WarningPopup({ onClose, text }) {
             <div className='warning-popup'>
                 <div>{text}</div>
             </div>
-            <div className='close' onClick={onClose}>X</div>
+            <div className='close' onClick={onClose}>×</div>
         </div>
     );
 }

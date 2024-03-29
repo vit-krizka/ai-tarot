@@ -7,6 +7,10 @@
     align-items: center;
     font-size: 30px;
 
+    @media (max-width: 767px) {
+        margin-top: 15px;
+    }
+
     input,
     button {
         font-size: 30px;
@@ -22,14 +26,86 @@
         gap: 15px;
         width: 95%;
         height: 95%;
+        position: relative;
+
+        @media (max-width: 767px) {
+            padding: 15px;
+            height: 200vw;
+        }
+
+        h1 {
+            font-size: 30px;
+            margin: 0;
+            text-transform: uppercase;
+        }
 
         form {
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            gap: 15px;
+            width: 40%;
+
+            @media (max-width: 767px) {
+                width: auto;
+            }
 
 
+            h2 {
+                font-size: 20px;
+                margin: 0;
+                text-transform: uppercase;
+                margin-top: 30px;
+                margin-bottom: 15px;
+                text-align: center;
+            }
+
+            label {
+                font-size: 16px;
+                margin: 0;
+                margin-bottom: 4px;
+            }
+
+            input {
+                padding: 7px;
+                font-size: 20px;
+                border: 1px solid #ffffff;
+                border-radius: 5px;
+                margin-bottom: 12px;
+
+                &:disabled {
+                    background-color: #cccccc;
+                    color: #000000;
+                }
+            }
+
+            button {
+                padding: 7px;
+                font-size: 20px;
+                margin-top: 30px;
+                border: 1px solid #ffffff;
+                border-radius: 5px;
+                background-color: #ffffff;
+                color: #000000;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #000000;
+                    color: #ffffff;
+                }
+            }
+        }
+
+        .register {
+            font-size: 20px;
+            text-decoration: none;
+
+            a {
+                color: #ffffff;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
         }
 
         .link {
@@ -38,6 +114,20 @@
 
             &:hover {
                 text-decoration: none;
+            }
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 30px;
+            cursor: pointer;
+            color: #ffffff;
+            text-decoration: none;
+
+            &:hover {
+                color: #ffffff;
             }
         }
     }

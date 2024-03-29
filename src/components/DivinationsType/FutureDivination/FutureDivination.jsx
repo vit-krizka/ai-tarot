@@ -1,13 +1,15 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+import { useAuth } from '../../../context/AuthProvider';
+
 import Header from '../../Header/Header';
 import Deck from '../../Deck/Deck';
 import DivinationButton from '../../DivinationElements/DivinationButton/DivinationButton';
 import DivinationTypeSelect from '../../DivinationElements/DivinationTypeSelect/DivinationTypeSelect';
 import WarningPopup from '../../WarningPopup/WarningPopup';
 
-import cardsData from '../../../data/cards.json';
+import cardsData from '../../../data/cards';
 
 import './futureDivination.scss';
 
@@ -15,6 +17,8 @@ function FutureDivination() {
     const [divinationType, setDivinationType] = useState('personal');
     const [cards, setCards] = useState([null, null, null]);
     const [activePopup, setActivePopup] = useState(null);
+
+    const { auth } = useAuth();
 
     const navigate = useNavigate();
 
@@ -56,6 +60,10 @@ function FutureDivination() {
             navigate('/future-divination/answer', { state: { divinationType, cards } });
         }
     };
+
+    if (!auth) {
+        navigate('/login');
+    }
 
     return (
         <>

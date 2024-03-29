@@ -5,6 +5,7 @@ const gptService = {
         const requestData = {
             // "model": "gpt-3.5-turbo",
             // "model": "gpt-4",
+            // "model": "gpt-3.5-turbo-1106",
             "model": "gpt-3.5-turbo-0125",
             "response_format": { "type": "json_object" },
             "messages": [

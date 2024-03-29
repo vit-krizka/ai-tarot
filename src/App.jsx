@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Login from './components/Login/Login';
 import Register from './components/Register/Register';
+import MyAccount from './components/MyAccount/MyAccount';
+
 import QuestionDivination from './components/DivinationsType/QuestionDivination/QuestionDivination';
 import Divinations from './components/Divinations/Divinations';
 import Cards from './components/Cards/Cards';
@@ -25,6 +27,8 @@ function App() {
 
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/my-account" element={<MyAccount />} />
+
           <Route path="/divinations" element={<Divinations />} />
           <Route path="/cards" element={<Cards />} />
           <Route path="/blog" element={<Blog />} />

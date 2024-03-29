@@ -53,8 +53,6 @@ function DivinationAnswer() {
                         "celkovyVyznam": "Zde podrobně popiš, co plyne pro oblast ${nameDivinationType(divinationType)} ze všech vyložených karet. Vycházej výhradně z vyložených karet."
                     }`;
 
-                    console.log(prompt);
-
                     const response = await gptService.sendData("Jsi věštec, který se soustředí na výklad budoucnosti otázku. Většina věšteb je příliš pozitivních a motivačních; ty se skutečně snažíš být více realistický.", prompt);
                     const jsonString = response.choices[0].message.content.trim();
                     localStorage.setItem('divinationAnswer', jsonString);

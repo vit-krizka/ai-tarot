@@ -5,7 +5,7 @@
     padding: 20px;
     border: 2px solid black;
     border-radius: 15px;
-    margin: 15px;
+    margin: 10px;
 
     .divination-description {
         display: flex;
@@ -15,11 +15,23 @@
         gap: 15px;
 
         .name {
+            text-align: center;
             margin: 0;
+            text-transform: uppercase;
+            min-height: 55px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .type {
+            width: 100%;
+            font-size: larger;
         }
 
         .description {
             margin: 0;
+            width: 100%;
+            font-size: larger;
         }
 
         .image {
@@ -40,6 +52,35 @@
                 cursor: pointer;
                 background-color: $dark-red;
             }
+        }
+
+        .tag {
+            position: absolute;
+            background-color: $blue;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-size: 32px;
+            border: #000000 2px solid;
+            transform: rotate(-20deg);
+
+            @media (max-width: 767px) {
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+.divination-description-wrapper.disabled {
+    background-color: #cccccc;
+    color: #000000;
+    cursor: not-allowed;
+
+    .divination-description {
+        .button {
+            background-color: $soft-red;
+            cursor: not-allowed;
         }
     }
 }

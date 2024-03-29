@@ -1,4 +1,4 @@
-[
+const cards = [
     {
         "id": 0,
         "name": "Blázen",
@@ -598,3 +598,5 @@
         "image": "P14-king-of-pentacles.png"
     }
 ]
+
+export default cards;

@@ -5,6 +5,11 @@
     height: 70px;
     // box-sizing: border-box;
 
+    @media (max-width: 767px) {
+        margin-bottom: 15px;
+    }
+
+
     .header {
         padding: 15px;
         position: relative;
@@ -12,7 +17,12 @@
         grid-template-columns: auto 1fr auto;
         gap: 15px;
         align-items: center;
-        height: 40px;
+        height: 70px;
+
+        @media (max-width: 767px) {
+            grid-template-columns: 1fr auto;
+        }
+
 
         a {
             color: #ffffff;
@@ -29,6 +39,11 @@
             padding: 0;
             text-transform: uppercase;
             font-size: 1.5rem;
+            cursor: pointer;
+
+            @media (max-width: 767px) {
+                display: none;
+            }
 
             a {
                 &:hover {
@@ -44,10 +59,10 @@
         }
 
         .buttons {
-            .userAvatar {
-                width: 35px;
-                height: 35px;
-                border-radius: 50%;
+
+            p,
+            a {
+                margin: 0;
             }
         }
     }
@@ -63,11 +78,16 @@
     .header {
         position: relative;
 
-        .close {
-            position: absolute;
-            right: 15px;
-            top: 15px;
-            z-index: 100;
+        .title {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #ffffff;
+            cursor: pointer;
+            margin: -20px;
+            padding: 20px;
+
+            @media (max-width: 767px) {
+                display: none;
+            }
         }
     }
 }
