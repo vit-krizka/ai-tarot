@@ -67,7 +67,7 @@ function Divinations() {
                             <DivinationDescription
                                 name="Źivotní rozhodnutí"
                                 type="Tarot"
-                                image='src/assets/divination-types/question-divination.webp'
+                                image='/assets/divination-types/question-divination.webp'
                                 description="Položte věštci otázku, na kterou lze odpovědět ano, či ne. Na základě tarotových karet věštec poskytne odpověď."
                                 button="Vyložit karty"
                                 link="/question-divination"
@@ -75,7 +75,7 @@ function Divinations() {
                             <DivinationDescription
                                 name="Minulost, přítomnost a budoucnost"
                                 type="Tarot"
-                                image='src/assets/divination-types/future-divination.webp'
+                                image='/assets/divination-types/future-divination.webp'
                                 description="Zjistěte, co vás čeká v nejbližší budoucnosti. Můžete si vybrat oblast života, např. pracovní vztahy či osobní život."
                                 button="Vyložit karty"
                                 link="/future-divination"
