@@ -64,6 +64,12 @@
             a {
                 margin: 0;
             }
+
+            @media (max-width: 767px) {
+                a[href="/my-account"] {
+                    display: none;
+                }
+            }
         }
     }
 }
