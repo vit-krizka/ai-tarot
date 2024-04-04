@@ -63,7 +63,7 @@ function MyAccount() {
                     <label htmlFor="profession">Profese</label>
                     <input type="text" id="profession" value={profession} onChange={(e) => setProfession(e.target.value)} />
 
-                    <button type="submit">'Aktualizovat údaje'</button>
+                    <button type="submit">Aktualizovat údaje</button>
                 </form>
                 <Link className='close' to="/">×</Link>
             </div>
