@@ -11,7 +11,6 @@ function MyAccount() {
     const { firstName, setFirstName, lastName, setLastName, profession, setProfession } = useContext(UserContext);
     const navigate = useNavigate();
 
-
     useEffect(() => {
         const loadData = async () => {
             try {
@@ -24,7 +23,6 @@ function MyAccount() {
                 navigate('/finish-register');
             }
         };
-
         loadData();
     }, [user]);
 
@@ -40,6 +38,7 @@ function MyAccount() {
 
             if (error) throw error;
             alert('Údaje byly úspěšně aktualizovány.');
+            navigate('/');
         } catch (error) {
             alert(`Při aktualizaci došlo k chybě: ${error.message}`);
         }

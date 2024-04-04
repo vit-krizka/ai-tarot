@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../../context/AuthProvider';
 import { UserContext } from '../../context/UserProvider';
@@ -9,6 +10,7 @@ import './finalRegister.scss';
 function FinalRegister() {
     const { user } = useAuth();
     const { firstName, setFirstName, lastName, setLastName, profession, setProfession } = useContext(UserContext);
+    const navigate = useNavigate();
 
     useEffect(() => {
         setFirstName(user?.user_metadata?.firstName);
@@ -34,9 +36,11 @@ function FinalRegister() {
                 setFirstName(firstName);
                 setLastName(lastName);
                 setProfession(profession);
+                alert('Registrace byla úspěšně dokončena.');
+                navigate('/');
             }
         } catch (error) {
-            console.error("Chyí ID uživatele:", error.message);
+            console.error("Chybí ID uživatele:", error.message);
         }
 
     };
