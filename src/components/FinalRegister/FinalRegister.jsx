@@ -4,42 +4,39 @@ import { useAuth } from '../../context/AuthProvider';
 import { UserContext } from '../../context/UserProvider';
 import { supabase } from '../../services/supabaseService';
 
-import './myAccount.scss';
+import './finalRegister.scss';
 
-function MyAccount() {
+function FinalRegister() {
     const { user } = useAuth();
     const { firstName, setFirstName, lastName, setLastName, profession, setProfession } = useContext(UserContext);
 
     useEffect(() => {
-        const loadData = async () => {
-            try {
-                const { data: userData, error } = await supabase.from('users').select().eq('id', user?.id).single();
-                if (error) throw error;
-                setFirstName(userData?.firstName);
-                setLastName(userData?.lastName);
-                setProfession(userData?.profession);
-            } catch (error) {
-                alert(`Při načítání dat došlo k chybě: ${error.message}`);
-            }
-        };
+        setFirstName(user?.user_metadata?.firstName);
+        setLastName(user?.user_metadata?.lastName);
+    });
 
-        loadData();
-    }, [user]);
-
-    const handleAccount = async (e) => {
+    const finishRegistration = async (e) => {
         e.preventDefault();
 
         try {
-            const { error } = await supabase.from('users').update({
-                firstName: firstName,
-                lastName: lastName,
-                profession: profession,
-            }).eq('id', user?.id);
+            const { error: insertError } = await supabase
+                .from('users')
+                .insert([{
+                    id: user.id,
+                    firstName: firstName,
+                    lastName: lastName,
+                    profession: profession,
+                }]);
 
-            if (error) throw error;
-            alert('Údaje byly úspěšně aktualizovány.');
+            if (insertError) {
+                console.error("Chyba při zápisu do databáze:", insertError.message);
+            } else {
+                setFirstName(firstNameInput);
+                setLastName(lastNameInput);
+                setProfession(professionInput);
+            }
         } catch (error) {
-            alert(`Při aktualizaci došlo k chybě: ${error.message}`);
+            console.error("Chyí ID uživatele:", error.message);
         }
 
     };
@@ -47,8 +44,8 @@ function MyAccount() {
     return (
         <div className='login-wrapper'>
             <div className='login'>
-                <h2>Uživatelský účet</h2>
-                <form onSubmit={handleAccount}>
+                <h2>Dokončení registrace</h2>
+                <form onSubmit={finishRegistration}>
                     <label htmlFor="email">E-mailová adresa</label>
                     <input type="email" value={user?.email} disabled />
 
@@ -61,7 +58,7 @@ function MyAccount() {
                     <label htmlFor="profession">Profese</label>
                     <input type="text" id="profession" value={profession} onChange={(e) => setProfession(e.target.value)} />
 
-                    <button type="submit">'Aktualizovat údaje'</button>
+                    <button type="submit">Dokončit registraci</button>
                 </form>
                 <Link className='close' to="/">×</Link>
             </div>
@@ -69,4 +66,4 @@ function MyAccount() {
     );
 }
 
-export default MyAccount;
+export default FinalRegister;

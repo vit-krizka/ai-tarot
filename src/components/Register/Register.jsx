@@ -1,21 +1,20 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import React, { useContext, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { supabase } from '../../services/supabaseService';
 import { useAuth } from '../../context/AuthProvider';
-
+import { UserContext } from '../../context/UserProvider';
 import './register.scss';
 
 function Register() {
     const { register } = useAuth();
+    const { setFirstName, setLastName, setProfession } = useContext(UserContext);
     const navigate = useNavigate();
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [firstName, setFirstName] = useState('');
-    const [lastName, setLastName] = useState('');
-    const [age, setAge] = useState('');
-    const [profession, setProfession] = useState('');
-    const [hobbies, setHobbies] = useState('');
+    const [firstNameInput, setFirstNameInput] = useState('');
+    const [lastNameInput, setLastNameInput] = useState('');
+    const [professionInput, setProfessionInput] = useState('');
 
     const handleRegister = async (e) => {
         e.preventDefault();
@@ -24,29 +23,18 @@ function Register() {
             return;
         }
 
-        const userData = {
-            email,
-            password,
-            firstName,
-            lastName,
-            age: parseInt(age, 10),
-            profession,
-            hobbies
-        };
-
         try {
-            const { user, error } = await register(userData);
+            const { user, error } = await register({ email, password, firstNameInput, lastNameInput });
 
-            if (!error) {
-                console.log("Registrace proběhla úspěšně");
-                navigate('/future-divination/');
-            } else {
-                alert("Došlo k chybě při registraci. Zkuste to prosím znovu.");
-                console.log("Chyba při registraci: " + error.message);
+            if (error) {
+                alert(`Chyba při registraci: ${error.message}`);
+                return;
             }
-        }
-        catch (error) {
-            console.log("Chyba při registraci: ", error);
+
+            console.log("Proveď nyní prosím ověření e-mailu.");
+            navigate('/future-divination/');
+        } catch (error) {
+            alert(`Chyba při registraci: ${error.message}`);
         }
     };
 
@@ -55,24 +43,14 @@ function Register() {
             <div className='login'>
                 <h1>Registrace</h1>
                 <form onSubmit={handleRegister}>
-                    <h2>Přihlašovací údaje</h2>
-
                     <label htmlFor="email">E-mailová adresa</label>
                     <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="e-mail" required />
                     <label htmlFor="password">Heslo</label>
                     <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="heslo" required minLength="6" />
-
-                    <h2>Další údaje o uživateli</h2>
                     <label htmlFor="firstName">Jméno</label>
-                    <input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} placeholder="jméno" />
+                    <input type="text" value={firstNameInput} onChange={(e) => setFirstNameInput(e.target.value)} placeholder="jméno" />
                     <label htmlFor="lastName">Příjmení</label>
-                    <input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} placeholder="příjmení" />
-                    <label htmlFor="age">Věk</label>
-                    <input type="number" value={age} onChange={(e) => setAge(e.target.value)} placeholder="věk" />
-                    <label htmlFor="profession">Profese</label>
-                    <input type="text" value={profession} onChange={(e) => setProfession(e.target.value)} placeholder="profese" />
-                    <label htmlFor="hobbies">Koníčky</label>
-                    <input type="text" value={hobbies} onChange={(e) => setHobbies(e.target.value)} placeholder="koníčky" />
+                    <input type="text" value={lastNameInput} onChange={(e) => setLastNameInput(e.target.value)} placeholder="příjmení" />
                     <button type="submit">Registrovat</button>
                 </form>
                 <Link className='close' to="/">×</Link>
@@ -82,3 +60,10 @@ function Register() {
 }
 
 export default Register;
+
+
+
+
+
+
+

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Login from './components/Login/Login';
 import Register from './components/Register/Register';
+import FinalRegister from './components/FinalRegister/FinalRegister';
 import MyAccount from './components/MyAccount/MyAccount';
 
 import QuestionDivination from './components/DivinationsType/QuestionDivination/QuestionDivination';
@@ -27,6 +28,8 @@ function App() {
 
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/finish-register" element={<FinalRegister />} />
+
           <Route path="/my-account" element={<MyAccount />} />
 
           <Route path="/divinations" element={<Divinations />} />

@@ -5,17 +5,14 @@ const AuthContext = createContext({});
 export const useAuth = () => useContext(AuthContext);
 
 const register = async (userInfo) => {
-    const { email, password, firstName, lastName, age, profession, hobbies } = userInfo;
+    const { email, password, firstNameInput, lastNameInput } = userInfo;
     const { user, error: signUpError } = await supabase.auth.signUp({
         email,
         password,
         options: {
             data: {
-                firstName: firstName,
-                lastName: lastName,
-                age: age,
-                profession: profession,
-                hobbies: hobbies
+                firstName: firstNameInput,
+                lastName: lastNameInput
             }
         }
     });
