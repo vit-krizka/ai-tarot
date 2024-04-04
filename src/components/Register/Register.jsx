@@ -36,13 +36,11 @@ function Register() {
 
         try {
             const { user, error } = await register(userData);
-            console.log("USER", user);
-            console.log("ERROR", error);
 
-            if (!error && user) {
+            if (!error) {
                 console.log("Registrace proběhla úspěšně");
                 navigate('/future-divination/');
-            } else if (error) {
+            } else {
                 alert("Došlo k chybě při registraci. Zkuste to prosím znovu.");
                 console.log("Chyba při registraci: " + error.message);
             }

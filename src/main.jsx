@@ -12,5 +12,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <App />
       </SettingProvider>
     </AuthProvider>
-  </React.StrictMode>,
+  </React.StrictMode>
 )
