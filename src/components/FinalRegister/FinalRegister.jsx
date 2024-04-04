@@ -31,9 +31,9 @@ function FinalRegister() {
             if (insertError) {
                 console.error("Chyba při zápisu do databáze:", insertError.message);
             } else {
-                setFirstName(firstNameInput);
-                setLastName(lastNameInput);
-                setProfession(professionInput);
+                setFirstName(firstName);
+                setLastName(lastName);
+                setProfession(profession);
             }
         } catch (error) {
             console.error("Chyí ID uživatele:", error.message);

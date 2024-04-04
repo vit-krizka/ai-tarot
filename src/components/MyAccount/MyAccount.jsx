@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthProvider';
 import { UserContext } from '../../context/UserProvider';
 import { supabase } from '../../services/supabaseService';
@@ -9,6 +9,8 @@ import './myAccount.scss';
 function MyAccount() {
     const { user } = useAuth();
     const { firstName, setFirstName, lastName, setLastName, profession, setProfession } = useContext(UserContext);
+    const navigate = useNavigate();
+
 
     useEffect(() => {
         const loadData = async () => {
@@ -19,7 +21,7 @@ function MyAccount() {
                 setLastName(userData?.lastName);
                 setProfession(userData?.profession);
             } catch (error) {
-                alert(`Při načítání dat došlo k chybě: ${error.message}`);
+                navigate('/finish-register');
             }
         };
 

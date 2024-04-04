@@ -1,20 +1,16 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { supabase } from '../../services/supabaseService';
 import { useAuth } from '../../context/AuthProvider';
-import { UserContext } from '../../context/UserProvider';
 import './register.scss';
 
 function Register() {
     const { register } = useAuth();
-    const { setFirstName, setLastName, setProfession } = useContext(UserContext);
     const navigate = useNavigate();
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [firstNameInput, setFirstNameInput] = useState('');
     const [lastNameInput, setLastNameInput] = useState('');
-    const [professionInput, setProfessionInput] = useState('');
 
     const handleRegister = async (e) => {
         e.preventDefault();
@@ -31,8 +27,8 @@ function Register() {
                 return;
             }
 
-            console.log("Proveď nyní prosím ověření e-mailu.");
-            navigate('/future-divination/');
+            alert("Ověř nyní svůj e-mail.");
+            navigate('/');
         } catch (error) {
             alert(`Chyba při registraci: ${error.message}`);
         }
